@@ -1,0 +1,275 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10940,        267]
+NotebookOptionsPosition[      9845,        242]
+NotebookOutlinePosition[     10259,        258]
+CellTagsIndexPosition[     10216,        255]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Single  note exercise", "Section",
+ CellChangeTimes->{{3.9279221119423065`*^9, 3.9279221216328373`*^9}, 
+   3.9279223166420517`*^9},ExpressionUUID->"500066bc-b3eb-c240-90d5-\
+86171c05a78f"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"beats", " ", "=", " ", "0.3"}], ";"}]], "Input",
+ CellChangeTimes->{{3.927922683210201*^9, 3.927922718555979*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"dba1ef95-8f42-de45-b1ef-ddb92332e23c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"three$octaves$note", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+    "\"\<C3\>\"", ",", " ", "\"\<D3\>\"", ",", " ", "\"\<E3\>\"", ",", " ", 
+     "\"\<F3\>\"", ",", " ", "\"\<G3\>\"", ",", " ", "\"\<A3\>\"", ",", " ", 
+     "\"\<B3\>\"", ",", " ", "\"\<C\>\"", ",", " ", "\"\<D\>\"", ",", " ", 
+     "\"\<E\>\"", ",", " ", "\"\<F\>\"", ",", " ", "\"\<G\>\"", ",", " ", 
+     "\"\<A\>\"", ",", " ", "\"\<B\>\"", ",", " ", "\"\<C5\>\"", ",", " ", 
+     "\"\<D5\>\"", ",", " ", "\"\<E5\>\"", ",", " ", "\"\<F5\>\"", ",", " ", 
+     "\"\<G5\>\"", ",", " ", "\"\<A5\>\"", ",", " ", "\"\<B5\>\"", ",", " ", 
+     "\"\<C6\>\""}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"three$octaves$note$weight", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+    "0.5", ",", " ", "1", ",", "3", ",", "1", ",", "3", ",", "1", ",", "1", 
+     ",", "0", ",", " ", "1", ",", "3", ",", "1", ",", "3", ",", "1", ",", 
+     "1", ",", "0", ",", "1", ",", "3", ",", "1", ",", "3", ",", "1", ",", 
+     "1", ",", "0.5"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Thread", "[", 
+  RowBox[{"three$octaves$note$weight", "->", "three$octaves$note"}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.9279219417829103`*^9, 3.927922053628589*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"d28ee160-4837-9f4c-954a-a6652289bcb0"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"0.5`", "\[Rule]", "\<\"C3\"\>"}], ",", 
+   RowBox[{"1", "\[Rule]", "\<\"D3\"\>"}], ",", 
+   RowBox[{"3", "\[Rule]", "\<\"E3\"\>"}], ",", 
+   RowBox[{"1", "\[Rule]", "\<\"F3\"\>"}], ",", 
+   RowBox[{"3", "\[Rule]", "\<\"G3\"\>"}], ",", 
+   RowBox[{"1", "\[Rule]", "\<\"A3\"\>"}], ",", 
+   RowBox[{"1", "\[Rule]", "\<\"B3\"\>"}], ",", 
+   RowBox[{"0", "\[Rule]", "\<\"C\"\>"}], ",", 
+   RowBox[{"1", "\[Rule]", "\<\"D\"\>"}], ",", 
+   RowBox[{"3", "\[Rule]", "\<\"E\"\>"}], ",", 
+   RowBox[{"1", "\[Rule]", "\<\"F\"\>"}], ",", 
+   RowBox[{"3", "\[Rule]", "\<\"G\"\>"}], ",", 
+   RowBox[{"1", "\[Rule]", "\<\"A\"\>"}], ",", 
+   RowBox[{"1", "\[Rule]", "\<\"B\"\>"}], ",", 
+   RowBox[{"0", "\[Rule]", "\<\"C5\"\>"}], ",", 
+   RowBox[{"1", "\[Rule]", "\<\"D5\"\>"}], ",", 
+   RowBox[{"3", "\[Rule]", "\<\"E5\"\>"}], ",", 
+   RowBox[{"1", "\[Rule]", "\<\"F5\"\>"}], ",", 
+   RowBox[{"3", "\[Rule]", "\<\"G5\"\>"}], ",", 
+   RowBox[{"1", "\[Rule]", "\<\"A5\"\>"}], ",", 
+   RowBox[{"1", "\[Rule]", "\<\"B5\"\>"}], ",", 
+   RowBox[{"0.5`", "\[Rule]", "\<\"C6\"\>"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.927922054657107*^9, 3.9281131046654377`*^9, 
+  3.9281154820492344`*^9},
+ CellLabel->"Out[4]=",ExpressionUUID->"91b147c8-a20d-c644-aee4-039c0229e861"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SingleNoteExercise$core", "[", "note_", "]"}], " ", ":=", " ", 
+  RowBox[{"{", "\[IndentingNewLine]", "\t\t", 
+   RowBox[{
+    RowBox[{"Sequence", "@@", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"SoundNote", "[", 
+         RowBox[{"#", ",", " ", "beats"}], "]"}], "&"}], "/@", 
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<C\>\"", ",", " ", "\"\<D\>\"", ",", " ", "\"\<E\>\"", ",", " ", 
+         "\"\<F\>\"", ",", " ", "\"\<G\>\"", ",", " ", "\"\<A\>\"", ",", " ", 
+         "\"\<B\>\"", ",", " ", "\"\<C5\>\""}], "}"}]}], ")"}]}], ",", 
+    "\[IndentingNewLine]", "\t\t", 
+    RowBox[{"SoundNote", "[", 
+     RowBox[{"\"\<C\>\"", ",", " ", 
+      RowBox[{"4", "*", "beats"}]}], "]"}], ",", " ", 
+    RowBox[{"SoundNote", "[", 
+     RowBox[{"\"\<C\>\"", ",", " ", 
+      RowBox[{"4", "*", "beats"}]}], "]"}], ",", "\[IndentingNewLine]", 
+    "\t\t", 
+    RowBox[{"SoundNote", "[", 
+     RowBox[{"note", ",", " ", 
+      RowBox[{"4", "*", "beats"}]}], "]"}], ",", " ", 
+    RowBox[{"SoundNote", "[", 
+     RowBox[{"note", ",", " ", 
+      RowBox[{"4", "*", "beats"}], ",", " ", 
+      RowBox[{"SoundVolume", "->", "0"}]}], "]"}], ",", "\[IndentingNewLine]",
+     "\t\t", 
+    RowBox[{"SoundNote", "[", 
+     RowBox[{"note", ",", " ", 
+      RowBox[{"4", "*", "beats"}]}], "]"}]}], 
+   RowBox[{"(*", 
+    RowBox[{",", " ", 
+     RowBox[{"SoundNote", "[", 
+      RowBox[{"note", ",", " ", 
+       RowBox[{"4", "*", "beats"}], ",", " ", 
+       RowBox[{"SoundVolume", "->", "0"}]}], "]"}]}], "*)"}], 
+   "\[IndentingNewLine]", "\t", "}"}]}]], "Input",
+ CellChangeTimes->{{3.9279223205916004`*^9, 3.9279224033451977`*^9}, {
+   3.9279224339963017`*^9, 3.927922478095024*^9}, {3.927922661933443*^9, 
+   3.927922703943964*^9}, 3.928114041505665*^9},
+ CellLabel->"In[5]:=",ExpressionUUID->"e228b511-f433-e449-a2d3-57d7d03c893e"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"Export", "[", 
+     RowBox[{
+      RowBox[{"FileNameJoin", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"NotebookDirectory", "[", "]"}], ",", " ", 
+         "\"\<single_note_exercise\>\"", ",", 
+         RowBox[{"#", "<>", "\"\<.mp3\>\""}]}], "}"}], "]"}], ",", 
+      RowBox[{"Sound", "@", 
+       RowBox[{"SingleNoteExercise$core", "[", "#", "]"}]}]}], "]"}], "&"}], "/@",
+    "three$octaves$note"}], ";"}]], "Input",
+ CellChangeTimes->{{3.928113622918228*^9, 3.9281136779300613`*^9}, {
+   3.928114021362444*^9, 3.928114038208103*^9}, 3.928114105665308*^9, {
+   3.9281142234450073`*^9, 3.928114242517006*^9}, {3.928114622150879*^9, 
+   3.9281147274948025`*^9}, {3.928114774368635*^9, 3.9281149728662567`*^9}, {
+   3.9281155047417107`*^9, 3.9281155048417377`*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"cc860a86-2d91-bb42-8cd5-7e94eea1cdec"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"Export", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"FileNameJoin", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"NotebookDirectory", "[", "]"}], ",", " ", 
+         "\"\<single_note_exercise\>\"", ",", 
+         RowBox[{"#", "<>", "\"\<.mp3\>\""}]}], "}"}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"AudioJoin", "[", 
+       RowBox[{"{", "\[IndentingNewLine]", "\t\t", 
+        RowBox[{
+         RowBox[{"Import", "[", 
+          RowBox[{"FileNameJoin", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"NotebookDirectory", "[", "]"}], ",", " ", 
+             "\"\<single_note_exercise\>\"", ",", " ", 
+             RowBox[{"#", "<>", "\"\<.mp3\>\""}]}], "}"}], "]"}], "]"}], ",", 
+         "\[IndentingNewLine]", "\t\t", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"AudioAmplify", "[", 
+             RowBox[{"#", ",", " ", "10"}], "]"}], "&"}], ")"}], "@", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"AudioTimeStretch", "[", 
+              RowBox[{"#", ",", " ", 
+               RowBox[{"4", "*", "beats"}]}], "]"}], "&"}], ")"}], "@", 
+           RowBox[{"SpeechSynthesize", "[", "#", "]"}]}]}]}], 
+        "\[IndentingNewLine]", "\t", "}"}], "]"}]}], "\[IndentingNewLine]", 
+     "]"}], "&"}], "/@", "three$octaves$note"}], ";"}]], "Input",
+ CellChangeTimes->{{3.928113622918228*^9, 3.9281136779300613`*^9}, {
+   3.928114021362444*^9, 3.928114038208103*^9}, 3.928114105665308*^9, {
+   3.9281142234450073`*^9, 3.928114242517006*^9}, {3.928114622150879*^9, 
+   3.9281147274948025`*^9}, {3.928114774368635*^9, 3.92811497803306*^9}, {
+   3.9281153942118435`*^9, 3.9281153944838963`*^9}, {3.928115430761606*^9, 
+   3.9281154326198425`*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"20a0d21f-4bbe-ee4c-82b4-c7067e7016bb"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"Import", "[", 
+     RowBox[{"FileNameJoin", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"NotebookDirectory", "[", "]"}], ",", " ", 
+        "\"\<single_note_exercise\>\"", ",", " ", 
+        RowBox[{"#", "<>", "\"\<.mp3\>\""}]}], "}"}], "]"}], "]"}], "&"}], "/@",
+    "three$octaves$note"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{"FileNameJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"NotebookDirectory", "[", "]"}], ",", " ", 
+       "\"\<single_note_exercise\>\"", ",", " ", "\"\<re.mp3\>\""}], "}"}], 
+     "]"}], ",", " ", 
+    RowBox[{"AudioJoin", "[", 
+     RowBox[{"RandomChoice", "[", 
+      RowBox[{
+       RowBox[{"three$octaves$note$weight", " ", "->", " ", "%"}], ",", " ", 
+       "100"}], "]"}], "]"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.928113622918228*^9, 3.9281136779300613`*^9}, {
+   3.928114021362444*^9, 3.928114038208103*^9}, 3.928114105665308*^9, {
+   3.9281142234450073`*^9, 3.928114242517006*^9}, {3.928114622150879*^9, 
+   3.9281147274948025`*^9}, {3.928114774368635*^9, 3.9281150596846504`*^9}, {
+   3.9281151229989853`*^9, 3.928115152885309*^9}, {3.9281154130727215`*^9, 
+   3.92811544755847*^9}, 3.9281155265422897`*^9},
+ CellLabel->"In[12]:=",ExpressionUUID->"b4e9dae4-24b8-d54a-9997-e152778837c3"]
+}, Open  ]]
+},
+WindowSize->{472.5, 742.875},
+WindowMargins->{{0.375, Automatic}, {0.375, Automatic}},
+FrontEndVersion->"14.0 for Microsoft Windows (64-bit) (December 12, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"5f62d82c-3bc5-3b4b-8242-691bc2a5e4a8"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 195, 3, 67, "Section",ExpressionUUID->"500066bc-b3eb-c240-90d5-86171c05a78f"],
+Cell[778, 27, 227, 4, 30, "Input",ExpressionUUID->"dba1ef95-8f42-de45-b1ef-ddb92332e23c"],
+Cell[CellGroupData[{
+Cell[1030, 35, 1350, 25, 140, "Input",ExpressionUUID->"d28ee160-4837-9f4c-954a-a6652289bcb0"],
+Cell[2383, 62, 1301, 27, 56, "Output",ExpressionUUID->"91b147c8-a20d-c644-aee4-039c0229e861"]
+}, Open  ]],
+Cell[3699, 92, 1886, 45, 224, "Input",ExpressionUUID->"e228b511-f433-e449-a2d3-57d7d03c893e"],
+Cell[5588, 139, 919, 20, 120, "Input",ExpressionUUID->"cc860a86-2d91-bb42-8cd5-7e94eea1cdec"],
+Cell[6510, 161, 1930, 44, 310, "Input",ExpressionUUID->"20a0d21f-4bbe-ee4c-82b4-c7067e7016bb"],
+Cell[8443, 207, 1386, 32, 208, "Input",ExpressionUUID->"b4e9dae4-24b8-d54a-9997-e152778837c3"]
+}, Open  ]]
+}
+]
+*)
+
